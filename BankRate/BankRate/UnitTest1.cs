@@ -19,16 +19,20 @@ namespace BankRate
 
         public double suma1 = 40.000;
         public double dobanda1 = 7.57;
-        public double period1 = 48;
+        public double period1 = 48; //pt ani, 240 pt 20 de ani
         public double monthRate1 = 39;
 
         [TestMethod]
-        public void TestMethod1()
+        public void firstMonthRate()
         {
+            decimal rate = rateCalculus(200, 2, 12, 1);
+            Assert.AreEqual(102, rate); //100 + 2 Eur
         }
-
-        public void rateCalculus(decicmal suma2, int perioadaAnuala, decimal dobandaAnuala, int lunaCurenta)
+       
+        //  public void rateCalculus(decicmal suma2, int perioadaAnuala, decimal dobandaAnuala, int lunaCurenta)    {   } [1st atempt to write the function, then watched the video]
+        decimal rateCalculus( decimal suma2, int perioadaAnuala, decimal dobandaAnuala, int lunaCurenta)
         {
+            return suma2 / perioadaAnuala +suma2 * dobandaAnuala / 12 /100 ;
         }
     }
 }

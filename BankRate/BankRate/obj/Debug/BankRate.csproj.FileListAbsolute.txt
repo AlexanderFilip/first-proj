@@ -1,0 +1,6 @@
+C:\Users\FILIPALEX\Documents\Visual Studio 2015\Projects\first-proj\BankRate\BankRate\bin\Debug\BankRate.dll
+C:\Users\FILIPALEX\Documents\Visual Studio 2015\Projects\first-proj\BankRate\BankRate\bin\Debug\BankRate.pdb
+C:\Users\FILIPALEX\Documents\Visual Studio 2015\Projects\first-proj\BankRate\BankRate\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\FILIPALEX\Documents\Visual Studio 2015\Projects\first-proj\BankRate\BankRate\obj\Debug\BankRate.csprojResolveAssemblyReference.cache
+C:\Users\FILIPALEX\Documents\Visual Studio 2015\Projects\first-proj\BankRate\BankRate\obj\Debug\BankRate.dll
+C:\Users\FILIPALEX\Documents\Visual Studio 2015\Projects\first-proj\BankRate\BankRate\obj\Debug\BankRate.pdb
