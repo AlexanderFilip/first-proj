@@ -16,7 +16,6 @@ namespace BankRate
         public double dobanda ;
         public double period ;
         public double monthRate ;
-
         public double suma1 = 40.000;
         public double dobanda1 = 7.57;
         public double period1 = 48; //pt ani, 240 pt 20 de ani
@@ -28,13 +27,35 @@ namespace BankRate
             decimal rate = rateCalculus(200, 2, 12, 1);
             Assert.AreEqual(102, rate); //100 + 2 Eur
         }
-       
+
+        [TestMethod]
+        public void secondMonthRate()
+        {
+            decimal rate = rateCalculus(200, 2, 12, 2);
+            Assert.AreEqual(101, rate); //100 + 1 Eur
+        }
+
+        [TestMethod]
+        public void thirdMonthRate ()
+        {
+            decimal rate = rateCalculus(200, 10, 12, 3);
+                Assert.AreEqual(21.6m ,rate);  //     l1 = 200- (20+ 12/5)    l2=20+ 12/100* 200 - (20 + 12 / 5)  l3 =
+        }
+
+        [TestMethod]
+        public void thirdMonthRate2()
+        {
+            decimal rate = rateCalculus(200, 10, 12, 3);
+            Assert.AreEqual(21.6m, rate);  //     l1 = 200- (20+ 12/5)    l2=20+ 12/100* 200 - (20 + 12 / 5)  l3 =
+        }
+
         //  public void rateCalculus(decicmal suma2, int perioadaAnuala, decimal dobandaAnuala, int lunaCurenta)    {   } [1st atempt to write the function, then watched the video]
-        decimal rateCalculus( decimal suma2, int perioadaAnuala, decimal dobandaLunara, int lunaCurenta) //perioadaAnuala == perioada per Months
+        decimal rateCalculus(decimal suma2, int perioadaAnuala, decimal dobandaLunara, int lunaCurenta) //perioadaAnuala == perioada per Months
         {                                                                                                   //dobandaLunara == dobanda per Month
             decimal principal = suma2 / perioadaAnuala;
             decimal dobandaAnualaExacta =dobandaLunara / 12 / 100; // calcul fix al dobanzii pe luna 
-            return principal + suma2 * dobandaAnualaExacta;
+            decimal sold = suma2 - (lunaCurenta - 1) * principal;
+            return principal + sold * dobandaAnualaExacta;
         }
     }
 }
